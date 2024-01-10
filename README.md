@@ -1,8 +1,8 @@
 # ES2_2023-2-Images-to-PDF-
 
 Integrantes<br>
--Bernanrdo Guimarães Evangelista
+-Bernanrdo Guimarães Evangelista- https://github.com/geBernardo <br>
 -Matheus da Silva Vieira
 -Marcelina Maye Abaga Maye
--Patricia da Silva Ramos
--Pedro Morini da Mota
+-Patricia da Silva Ramos- https://github.com/PatriciaRamosS <br>
+-Pedro Morini da Mota- https://github.com/pedromorini <br>
