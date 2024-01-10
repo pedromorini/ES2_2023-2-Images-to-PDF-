@@ -1,6 +1,6 @@
 # ES2_2023-2-Images-to-PDF-
 
-Integrantes
+Integrantes<br>
 -Bernanrdo Guimarães Evangelista
 -Matheus da Silva Vieira
 -Marcelina Maye Abaga Maye
