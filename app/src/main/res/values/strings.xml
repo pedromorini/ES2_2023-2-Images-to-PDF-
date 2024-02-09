@@ -555,15 +555,12 @@
     <string name="error_no_image_in_zip">ZIP file contains no image</string>
     <string name="error_open_file">An error occurred while opening the file. Please try reopening</string>
 
-<<<<<<< HEAD
     <!--translate pdf-->
     <string name="translate_pdf">Translate PDF</string>
 
     <!--pdf to epub-->
     <string name="pdf_to_epub">PDF to ePUB</string>
 
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
     <!--text to pdf-->
     <string name="error_pdf_not_created">Sorry, PDF was not created. Please try again</string>
 
