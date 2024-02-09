@@ -63,11 +63,8 @@ public class Constants {
     public static final String PDF_TO_IMAGES_KEY = "PDF to Images";
     public static final String EXCEL_TO_PDF_KEY = "Excel to PDF";
     public static final String ZIP_TO_PDF_KEY = "ZIP to PDF";
-<<<<<<< HEAD
     public static final String TRANSLATE_PDF_KEY = "Translate PDF";
     public static final String PDF_TO_EPUB_KEY = "PDF to ePUB";
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 
     public static final String BUNDLE_DATA = "bundle_data";
     public static final String REORDER_PAGES = "Reorder pages";
@@ -90,10 +87,7 @@ public class Constants {
     public static final String excelWorkbookExtension = ".xlsx";
     public static final String docExtension = ".doc";
     public static final String docxExtension = ".docx";
-<<<<<<< HEAD
     public static final String epubExtension = ".epub";
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
     public static final String tempDirectory = "temp";
 
     public static final String AUTHORITY_APP = "com.swati4star.shareFile";
