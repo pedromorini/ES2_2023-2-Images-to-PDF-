@@ -6,4 +6,3 @@ Integrantes<br>
 -Marcelina Maye Abaga Maye- https://github.com/Marmaye <br>
 -Patricia da Silva Ramos- https://github.com/PatriciaRamosS <br>
 -Pedro Morini da Mota- https://github.com/pedromorini <br>
->>>>>>> d7f73e14ec3835bfa033e9016afd687da6fe73f3
