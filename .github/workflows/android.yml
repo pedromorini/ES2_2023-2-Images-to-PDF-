@@ -22,7 +22,9 @@ jobs:
         java-version: 17
         distribution: 'adopt'
 
-
+    - name: Instalar dependências
+      run: ./gradlew dependencies --info || true
+    
     - name: Compilar código
       run: ./gradlew build --info
 
