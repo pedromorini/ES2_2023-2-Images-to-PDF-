@@ -1,0 +1,345 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="swati4star.createpdf"
+4    android:versionCode="110"
+5    android:versionName="9.0.1" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+11-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:6:5-81
+11-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:6:22-78
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:7:5-80
+12-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:7:22-77
+13    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+13-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:8:5-10:40
+13-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:9:9-66
+14
+15    <uses-feature android:name="android.hardware.camera" />
+15-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:12:5-60
+15-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:12:19-57
+16    <uses-feature
+16-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:13:5-15:36
+17        android:name="android.hardware.camera.autofocus"
+17-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:14:9-57
+18        android:required="false" />
+18-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:15:9-33
+19
+20    <uses-permission android:name="android.permission.CAMERA" />
+20-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:17:5-65
+20-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:17:22-62
+21
+22    <uses-feature
+22-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:27:5-29:36
+23        android:name="android.hardware.camera.front"
+23-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:28:9-53
+24        android:required="false" />
+24-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:29:9-33
+25    <uses-feature
+25-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:35:5-37:36
+26        android:name="android.hardware.camera.flash"
+26-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:36:9-53
+27        android:required="false" />
+27-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:37:9-33
+28    <uses-feature
+28-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:38:5-40:36
+29        android:name="android.hardware.screen.landscape"
+29-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:39:9-57
+30        android:required="false" />
+30-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:40:9-33
+31    <uses-feature
+31-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:41:5-43:36
+32        android:name="android.hardware.wifi"
+32-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:42:9-45
+33        android:required="false" />
+33-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:43:9-33
+34
+35    <permission
+35-->[androidx.core:core:1.9.0] C:\Users\pedro\.gradle\caches\transforms-3\02117cf579dee9bcbfa2ec19947fc680\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+36        android:name="swati4star.createpdf.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+36-->[androidx.core:core:1.9.0] C:\Users\pedro\.gradle\caches\transforms-3\02117cf579dee9bcbfa2ec19947fc680\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+37        android:protectionLevel="signature" />
+37-->[androidx.core:core:1.9.0] C:\Users\pedro\.gradle\caches\transforms-3\02117cf579dee9bcbfa2ec19947fc680\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+38
+39    <uses-permission android:name="swati4star.createpdf.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+39-->[androidx.core:core:1.9.0] C:\Users\pedro\.gradle\caches\transforms-3\02117cf579dee9bcbfa2ec19947fc680\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+39-->[androidx.core:core:1.9.0] C:\Users\pedro\.gradle\caches\transforms-3\02117cf579dee9bcbfa2ec19947fc680\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+40    <uses-permission android:name="android.permission.REORDER_TASKS" />
+40-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:24:5-72
+40-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:24:22-69
+41
+42    <application
+42-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:19:5-85:19
+43        android:name="androidx.multidex.MultiDexApplication"
+43-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:20:9-61
+44        android:allowBackup="true"
+44-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:21:9-35
+45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+45-->[androidx.core:core:1.9.0] C:\Users\pedro\.gradle\caches\transforms-3\02117cf579dee9bcbfa2ec19947fc680\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+46        android:debuggable="true"
+47        android:extractNativeLibs="false"
+48        android:fullBackupContent="@xml/backup_descriptor"
+48-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:22:9-59
+49        android:hardwareAccelerated="true"
+49-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:23:9-43
+50        android:icon="@mipmap/ic_launcher"
+50-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:24:9-43
+51        android:label="@string/app_name"
+51-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:25:9-41
+52        android:largeHeap="true"
+52-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:26:9-33
+53        android:requestLegacyExternalStorage="true"
+53-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:27:9-52
+54        android:supportsRtl="true"
+54-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:28:9-35
+55        android:theme="@style/AppThemeWhite" >
+55-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:29:9-45
+56        <activity
+56-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:31:9-40:20
+57            android:name="swati4star.createpdf.activity.SplashActivity"
+57-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:32:13-52
+58            android:exported="true"
+58-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:33:13-36
+59            android:theme="@style/SplashTheme" >
+59-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:34:13-47
+60            <intent-filter>
+60-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:35:13-39:29
+61                <action android:name="android.intent.action.MAIN" />
+61-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:36:17-69
+61-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:36:25-66
+62
+63                <category android:name="android.intent.category.LAUNCHER" />
+63-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:38:17-77
+63-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:38:27-74
+64            </intent-filter>
+65        </activity>
+66        <activity
+66-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:41:9-44:59
+67            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+67-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:42:13-76
+68            android:exported="true"
+68-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:43:13-36
+69            android:theme="@style/Base.Theme.AppCompat" />
+69-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:44:13-56
+70        <activity
+70-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:45:9-65:20
+71            android:name="swati4star.createpdf.activity.MainActivity"
+71-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:46:13-50
+72            android:exported="false"
+72-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:50:13-37
+73            android:label="@string/app_name"
+73-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:47:13-45
+74            android:screenOrientation="portrait"
+74-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:48:13-49
+75            android:windowSoftInputMode="adjustPan" >
+75-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:49:13-52
+76            <intent-filter>
+76-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:51:13-55:29
+77                <action android:name="android.intent.action.SEND_MULTIPLE" />
+77-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:52:17-78
+77-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:52:25-75
+78
+79                <category android:name="android.intent.category.DEFAULT" />
+79-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:53:17-76
+79-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:53:27-73
+80
+81                <data android:mimeType="image/*" />
+81-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:54:17-52
+81-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:54:23-49
+82            </intent-filter>
+83            <intent-filter>
+83-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:56:13-60:29
+84                <action android:name="android.intent.action.SEND" />
+84-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:57:17-69
+84-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:57:25-66
+85
+86                <category android:name="android.intent.category.DEFAULT" />
+86-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:53:17-76
+86-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:53:27-73
+87
+88                <data android:mimeType="image/*" />
+88-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:54:17-52
+88-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:54:23-49
+89            </intent-filter>
+90
+91            <meta-data
+91-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:62:13-64:53
+92                android:name="android.app.shortcuts"
+92-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:63:17-53
+93                android:resource="@xml/shortcuts" />
+93-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:64:17-50
+94        </activity>
+95        <activity android:name="swati4star.createpdf.activity.CropImageActivity" />
+95-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:66:9-64
+95-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:66:19-61
+96
+97        <provider
+97-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:68:9-76:20
+98            android:name="androidx.core.content.FileProvider"
+98-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:69:13-62
+99            android:authorities="com.swati4star.shareFile"
+99-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:70:13-59
+100            android:exported="false"
+100-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:71:13-37
+101            android:grantUriPermissions="true" >
+101-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:72:13-47
+102            <meta-data
+102-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:73:13-75:58
+103                android:name="android.support.FILE_PROVIDER_PATHS"
+103-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:74:17-67
+104                android:resource="@xml/provider_paths" />
+104-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:75:17-55
+105        </provider>
+106
+107        <activity android:name="swati4star.createpdf.activity.WelcomeActivity" />
+107-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:78:9-62
+107-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:78:19-59
+108        <activity android:name="swati4star.createpdf.activity.ImageEditor" />
+108-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:79:9-58
+108-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:79:19-55
+109        <activity android:name="swati4star.createpdf.activity.PreviewActivity" />
+109-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:80:9-62
+109-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:80:19-59
+110        <activity android:name="swati4star.createpdf.activity.RearrangeImages" />
+110-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:81:9-62
+110-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:81:19-59
+111        <activity android:name="swati4star.createpdf.activity.ImagesPreviewActivity" />
+111-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:82:9-68
+111-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:82:19-65
+112        <activity android:name="swati4star.createpdf.activity.RearrangePdfPages" />
+112-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:83:9-64
+112-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:83:19-61
+113        <activity android:name="swati4star.createpdf.activity.FavouritesActivity" />
+113-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:84:9-65
+113-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:84:19-62
+114        <activity android:name="com.zhihu.matisse.ui.MatisseActivity" />
+114-->[com.zhihu.android:matisse:0.5.3-beta3] C:\Users\pedro\.gradle\caches\transforms-3\b7192b7c6179924ca8f9417985346cea\transformed\jetified-matisse-0.5.3-beta3\AndroidManifest.xml:28:9-73
+114-->[com.zhihu.android:matisse:0.5.3-beta3] C:\Users\pedro\.gradle\caches\transforms-3\b7192b7c6179924ca8f9417985346cea\transformed\jetified-matisse-0.5.3-beta3\AndroidManifest.xml:28:19-70
+115        <activity android:name="com.zhihu.matisse.internal.ui.AlbumPreviewActivity" />
+115-->[com.zhihu.android:matisse:0.5.3-beta3] C:\Users\pedro\.gradle\caches\transforms-3\b7192b7c6179924ca8f9417985346cea\transformed\jetified-matisse-0.5.3-beta3\AndroidManifest.xml:29:9-87
+115-->[com.zhihu.android:matisse:0.5.3-beta3] C:\Users\pedro\.gradle\caches\transforms-3\b7192b7c6179924ca8f9417985346cea\transformed\jetified-matisse-0.5.3-beta3\AndroidManifest.xml:29:19-84
+116        <activity android:name="com.zhihu.matisse.internal.ui.SelectedPreviewActivity" />
+116-->[com.zhihu.android:matisse:0.5.3-beta3] C:\Users\pedro\.gradle\caches\transforms-3\b7192b7c6179924ca8f9417985346cea\transformed\jetified-matisse-0.5.3-beta3\AndroidManifest.xml:30:9-90
+116-->[com.zhihu.android:matisse:0.5.3-beta3] C:\Users\pedro\.gradle\caches\transforms-3\b7192b7c6179924ca8f9417985346cea\transformed\jetified-matisse-0.5.3-beta3\AndroidManifest.xml:30:19-87
+117        <activity
+117-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:46:9-52:63
+118            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+118-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:47:13-74
+119            android:clearTaskOnLaunch="true"
+119-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:48:13-45
+120            android:screenOrientation="sensorLandscape"
+120-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:49:13-56
+121            android:stateNotNeeded="true"
+121-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:50:13-42
+122            android:theme="@style/zxing_CaptureTheme"
+122-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:51:13-54
+123            android:windowSoftInputMode="stateAlwaysHidden" />
+123-->[com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\pedro\.gradle\caches\transforms-3\b4fb62a4670759675d6817844fb635bb\transformed\jetified-zxing-android-embedded-3.4.0\AndroidManifest.xml:52:13-60
+124
+125        <service
+125-->[androidx.room:room-runtime:2.5.1] C:\Users\pedro\.gradle\caches\transforms-3\d3909684477b828836ca7e9d7eb67447\transformed\room-runtime-2.5.1\AndroidManifest.xml:24:9-28:63
+126            android:name="androidx.room.MultiInstanceInvalidationService"
+126-->[androidx.room:room-runtime:2.5.1] C:\Users\pedro\.gradle\caches\transforms-3\d3909684477b828836ca7e9d7eb67447\transformed\room-runtime-2.5.1\AndroidManifest.xml:25:13-74
+127            android:directBootAware="true"
+127-->[androidx.room:room-runtime:2.5.1] C:\Users\pedro\.gradle\caches\transforms-3\d3909684477b828836ca7e9d7eb67447\transformed\room-runtime-2.5.1\AndroidManifest.xml:26:13-43
+128            android:exported="false" />
+128-->[androidx.room:room-runtime:2.5.1] C:\Users\pedro\.gradle\caches\transforms-3\d3909684477b828836ca7e9d7eb67447\transformed\room-runtime-2.5.1\AndroidManifest.xml:27:13-37
+129
+130        <activity
+130-->[lib.kashif:folderpicker:2.4] C:\Users\pedro\.gradle\caches\transforms-3\8ed43f7bbdc1cf15602bac353160a8de\transformed\jetified-folderpicker-2.4\AndroidManifest.xml:15:9-17:52
+131            android:name="lib.folderpicker.FolderPicker"
+131-->[lib.kashif:folderpicker:2.4] C:\Users\pedro\.gradle\caches\transforms-3\8ed43f7bbdc1cf15602bac353160a8de\transformed\jetified-folderpicker-2.4\AndroidManifest.xml:16:13-57
+132            android:screenOrientation="portrait" />
+132-->[lib.kashif:folderpicker:2.4] C:\Users\pedro\.gradle\caches\transforms-3\8ed43f7bbdc1cf15602bac353160a8de\transformed\jetified-folderpicker-2.4\AndroidManifest.xml:17:13-49
+133
+134        <provider
+134-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pedro\.gradle\caches\transforms-3\edfbe296ab920176853c8f83330af035\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+135            android:name="androidx.startup.InitializationProvider"
+135-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pedro\.gradle\caches\transforms-3\edfbe296ab920176853c8f83330af035\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+136            android:authorities="swati4star.createpdf.androidx-startup"
+136-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pedro\.gradle\caches\transforms-3\edfbe296ab920176853c8f83330af035\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+137            android:exported="false" >
+137-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pedro\.gradle\caches\transforms-3\edfbe296ab920176853c8f83330af035\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+138            <meta-data
+138-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pedro\.gradle\caches\transforms-3\edfbe296ab920176853c8f83330af035\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+139                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+139-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pedro\.gradle\caches\transforms-3\edfbe296ab920176853c8f83330af035\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+140                android:value="androidx.startup" />
+140-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pedro\.gradle\caches\transforms-3\edfbe296ab920176853c8f83330af035\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+141            <meta-data
+141-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\pedro\.gradle\caches\transforms-3\ff735dcf399193098827c57e697bb846\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+142                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+142-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\pedro\.gradle\caches\transforms-3\ff735dcf399193098827c57e697bb846\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+143                android:value="androidx.startup" />
+143-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\pedro\.gradle\caches\transforms-3\ff735dcf399193098827c57e697bb846\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+144        </provider>
+145
+146        <uses-library
+146-->[androidx.window:window:1.0.0] C:\Users\pedro\.gradle\caches\transforms-3\7e6299d2bc5bfe4e28219e3f01f482f1\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+147            android:name="androidx.window.extensions"
+147-->[androidx.window:window:1.0.0] C:\Users\pedro\.gradle\caches\transforms-3\7e6299d2bc5bfe4e28219e3f01f482f1\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+148            android:required="false" />
+148-->[androidx.window:window:1.0.0] C:\Users\pedro\.gradle\caches\transforms-3\7e6299d2bc5bfe4e28219e3f01f482f1\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+149        <uses-library
+149-->[androidx.window:window:1.0.0] C:\Users\pedro\.gradle\caches\transforms-3\7e6299d2bc5bfe4e28219e3f01f482f1\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+150            android:name="androidx.window.sidecar"
+150-->[androidx.window:window:1.0.0] C:\Users\pedro\.gradle\caches\transforms-3\7e6299d2bc5bfe4e28219e3f01f482f1\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+151            android:required="false" />
+151-->[androidx.window:window:1.0.0] C:\Users\pedro\.gradle\caches\transforms-3\7e6299d2bc5bfe4e28219e3f01f482f1\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+152
+153        <activity
+153-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:27:9-34:20
+154            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+154-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:28:13-99
+155            android:exported="true"
+155-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:29:13-36
+156            android:theme="@style/WhiteBackgroundTheme" >
+156-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:30:13-56
+157            <intent-filter android:priority="-100" >
+157-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:31:13-33:29
+157-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:31:28-51
+158                <category android:name="android.intent.category.LAUNCHER" />
+158-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:38:17-77
+158-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:38:27-74
+159            </intent-filter>
+160        </activity>
+161        <activity
+161-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:35:9-42:20
+162            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+162-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:36:13-95
+163            android:exported="true"
+163-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:37:13-36
+164            android:theme="@style/WhiteBackgroundTheme" >
+164-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:38:13-56
+165            <intent-filter android:priority="-100" >
+165-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:31:13-33:29
+165-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:31:28-51
+166                <category android:name="android.intent.category.LAUNCHER" />
+166-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:38:17-77
+166-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:38:27-74
+167            </intent-filter>
+168        </activity>
+169        <activity
+169-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:43:9-50:20
+170            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+170-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:44:13-103
+171            android:exported="true"
+171-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:45:13-36
+172            android:theme="@style/WhiteBackgroundDialogTheme" >
+172-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:46:13-62
+173            <intent-filter android:priority="-100" >
+173-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:31:13-33:29
+173-->[androidx.test:core:1.5.0] C:\Users\pedro\.gradle\caches\transforms-3\e411b7bf0fe9b4349729535d744c8689\transformed\jetified-core-1.5.0\AndroidManifest.xml:31:28-51
+174                <category android:name="android.intent.category.LAUNCHER" />
+174-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:38:17-77
+174-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\AndroidManifest.xml:38:27-74
+175            </intent-filter>
+176        </activity>
+177    </application>
+178
+179</manifest>

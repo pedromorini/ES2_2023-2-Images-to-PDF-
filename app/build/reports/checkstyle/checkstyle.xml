@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="7.6.1">
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\androidTest\java\swati4star\createpdf\ApplicationTest.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\androidTest\java\swati4star\createpdf\util\DirectoryUtilsTest.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\androidTest\java\swati4star\createpdf\util\ImageUtilsTest.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\androidTest\java\swati4star\createpdf\util\StringUtilsTest.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\activity\CropImageActivity.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\activity\FavouritesActivity.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\activity\ImageEditor.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\activity\ImagesPreviewActivity.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\activity\MainActivity.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\activity\PreviewActivity.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\activity\RearrangeImages.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\activity\RearrangePdfPages.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\activity\SplashActivity.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\activity\WelcomeActivity.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\adapter\BrushItemAdapter.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\adapter\EnhancementOptionsAdapter.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\adapter\ExtractImagesAdapter.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\adapter\FAQAdapter.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\adapter\FilesListAdapter.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\adapter\HistoryAdapter.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\adapter\ImageFiltersAdapter.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\adapter\MergeFilesAdapter.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\adapter\MergeSelectedFilesAdapter.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\adapter\PreviewAdapter.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\adapter\PreviewImageOptionsAdapter.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\adapter\RearrangeImagesAdapter.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\adapter\RearrangePdfAdapter.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\adapter\RecentListAdapter.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\adapter\ViewFilesAdapter.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\adapter\WhatsNewAdapter.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\customviews\MyCardView.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\database\AppDatabase.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\database\DatabaseHelper.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\database\History.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\database\HistoryDao.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\AboutUsFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\AddImagesFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\AddTextFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\ExceltoPdfFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\ExtractTextFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\FAQFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\FavouritesFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\HistoryFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\HomeFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\ImageToPdfFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\InvertPdfFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\MergeFilesFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\PdfToEpubFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\PdfToImageFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\QrBarcodeScanFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\RemoveDuplicatePagesFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\RemovePagesFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\SettingsFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\SplitFilesFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\TranslatePdfFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\ViewFilesFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\ZipToPdfFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\texttopdf\Enhancers.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\texttopdf\FontColorEnhancer.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\texttopdf\FontFamilyEnhancer.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\texttopdf\FontSizeEnhancer.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\texttopdf\PageColorEnhancer.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\texttopdf\PageSizeEnhancer.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\texttopdf\PasswordEnhancer.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\texttopdf\TextToPdfContract.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\fragment\texttopdf\TextToPdfFragment.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\interfaces\BottomSheetPopulate.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\interfaces\DataSetChanged.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\interfaces\DialogCallbacks.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\interfaces\EmptyStateChangeListener.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\interfaces\Enhancer.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\interfaces\ExtractImagesListener.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\interfaces\GenericCallback.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\interfaces\ItemSelectedListener.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\interfaces\MergeFilesListener.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\interfaces\OnBackPressedInterface.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\interfaces\OnFilterItemClickedListener.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\interfaces\OnItemClickListener.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\interfaces\OnPDFCompressedInterface.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\interfaces\OnPDFCreatedInterface.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\interfaces\OnPdfReorderedInterface.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\interfaces\OnTextToPdfInterface.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\model\BrushItem.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\model\EnhancementOptionsEntity.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\model\FAQItem.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\model\FilterItem.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\model\HomePageItem.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\model\ImageToPDFOptions.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\model\PDFFile.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\model\PDFOptions.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\model\PreviewImageOptionItem.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\model\TextToPDFOptions.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\model\Watermark.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\model\WhatsNew.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\preferences\TextToPdfPreferences.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\providers\fragmentmanagement\FragmentManagement.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\providers\fragmentmanagement\IFragmentManagement.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\AddTextEnhancementOptionsUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\BottomSheetCallback.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\BottomSheetUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\BrushUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\ColorUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\CommonCodeUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\Constants.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\CreatePdf.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\DefaultTextWatcher.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\DialogUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\DirectoryUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\DocFileReader.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\DocxFileReader.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\ExcelToPDFAsync.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\ExtractImages.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\FavouritesPreferences.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\FeedbackUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\FileInfoUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\FileReader.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\FileSortUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\FileUriUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\FileUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\FragmentUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\ImageEnhancementOptionsUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\ImageFilterUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\ImageSortUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\ImageUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\InvertPdf.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\MergeHelper.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\MergePdf.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\MergePdfEnhancementOptionsUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\MorphButtonUtility.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\PDFEncryptionUtility.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\PDFRotationUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\PDFUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\PageSizeUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\PdfToImages.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\PermissionsUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\PopulateBottomSheetList.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\PopulateBottomSheetListWithExcelFiles.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\PopulateList.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\PrintDocumentAdapterHelper.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\RealPathUtil.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\RecentUtil.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\RemoveDuplicates.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\ResultUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\SettingsOptions.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\SharedPreferencesUtil.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\SplitPDFUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\StringUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\TextFileReader.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\TextToPDFUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\TextToPdfAsync.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\ThemeUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\ViewFilesDividerItemDecoration.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\WatermarkPageEvent.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\WatermarkUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\WhatsNewUtils.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\ZipToPdf.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\main\java\swati4star\createpdf\util\lambda\Consumer.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\test\java\swati4star\createpdf\util\ColorUtilsTest.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\test\java\swati4star\createpdf\util\FileSortUtilsTest.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\test\java\swati4star\createpdf\util\ImageSortUtilsTest.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\test\java\util\BrushUtilsTest.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\test\java\util\FileUtilsTest.java">
+</file>
+<file name="D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\src\test\java\util\PDFUtilsTest.java">
+</file>
+</checkstyle>
