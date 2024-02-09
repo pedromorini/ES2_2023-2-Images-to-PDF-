@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-<<<<<<< HEAD
     xmlns:tools="http://schemas.android.com/tools">
-=======
-    xmlns:tools="http://schemas.android.com/tools"
-    package="swati4star.createpdf">
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
