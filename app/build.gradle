@@ -1,10 +1,6 @@
 apply plugin: 'com.android.application'
 apply from: '../config/checkstyle.gradle'
-<<<<<<< HEAD
 appy plugin: 'org.sonarqube'
-=======
-
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 android {
     compileSdkVersion 33
     buildToolsVersion '30.0.3'
@@ -42,10 +38,7 @@ android {
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/NOTICE.txt'
         exclude 'META-INF/LICENSE.txt'
-<<<<<<< HEAD
         exclude 'META-INF/INDEX.LIST'
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
     }
     lintOptions {
         checkReleaseBuilds false
@@ -56,10 +49,7 @@ android {
             returnDefaultValues = true
         }
     }
-<<<<<<< HEAD
     namespace 'swati4star.createpdf'
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 }
 configurations {
     all {
@@ -79,10 +69,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.legacy:legacy-support-v13:1.0.0'
-<<<<<<< HEAD
     implementation 'com.google.cloud:google-cloud-translate:2.34.0'
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
     implementation 'com.google.android.material:material:1.4.0-beta01'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.cardview:cardview:1.0.0'
@@ -91,11 +78,8 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.preference:preference:1.2.0'
 
-<<<<<<< HEAD
     implementation 'com.bit-scout:pdf-converter:1.0.2'
 
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
     // butterknife
     implementation 'com.jakewharton:butterknife:10.2.3'
     implementation 'androidx.test.ext:junit:1.1.5'
