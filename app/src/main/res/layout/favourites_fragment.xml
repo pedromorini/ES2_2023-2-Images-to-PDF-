@@ -276,7 +276,6 @@
                     android:visibility="gone"
                     app:option_icon="@drawable/ic_zip_to_pdf"
                     app:option_text="@string/zip_to_pdf" />
-<<<<<<< HEAD
 
                 <swati4star.createpdf.customviews.MyCardView
                     android:id="@+id/translate_pdf_fav"
@@ -295,8 +294,6 @@
                     android:visibility="gone"
                     app:option_icon="@drawable/ic_pdf_to_epub_24"
                     app:option_text="@string/pdf_to_epub" />
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
