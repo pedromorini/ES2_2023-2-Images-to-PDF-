@@ -1,30 +1,25 @@
 package swati4star.createpdf.util;
 
-import static swati4star.createpdf.util.Constants.STORAGE_LOCATION;
-import static swati4star.createpdf.util.Constants.excelExtension;
-import static swati4star.createpdf.util.Constants.excelWorkbookExtension;
-import static swati4star.createpdf.util.Constants.pdfExtension;
+import static swati4star.createpdf.util.Constants.pdfDirectory;
+import static swati4star.createpdf.util.Constants.tempDirectory;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import swati4star.createpdf.R;
 
 public class DirectoryUtils {
-
     private final Context mContext;
     private final SharedPreferences mSharedPreferences;
-    private ArrayList<String> mFilePaths;
 
     public DirectoryUtils(Context context) {
         mContext = context;
@@ -32,30 +27,35 @@ public class DirectoryUtils {
     }
 
     /**
-     * creates new folder for temp files
+     * Creates a new folder for temp files
      */
     public static void makeAndClearTemp() {
         String dest = Environment.getExternalStorageDirectory().toString() +
-                Constants.pdfDirectory + Constants.tempDirectory;
+                pdfDirectory + tempDirectory;
         File folder = new File(dest);
         boolean result = folder.mkdir();
-
-        // clear all the files in it, if any
+        // Clear all the files in it, if any
         if (result && folder.isDirectory()) {
             String[] children = folder.list();
-            for (String child : children) {
-                new File(folder, child).delete();
+            if (children != null) {
+                for (String child : children) {
+                    File childFile = new File(folder, child);
+                    boolean deletionResult = childFile.delete();
+                    if (!deletionResult) {
+                        Log.e("DirectoryUtils", "Failed to delete file: " + childFile.getAbsolutePath());
+                    }
+                }
             }
         }
     }
 
     /**
-     * Used to search for PDF matching the search query
+     * Used to search for PDFs matching the search query
      *
      * @param query - Query from search bar
      * @return ArrayList containing all the pdf files matching the search query
      */
-    ArrayList<File> searchPDF(String query) {
+    public ArrayList<File> searchPDF(String query) {
         ArrayList<File> searchResult = new ArrayList<>();
         final File[] files = getOrCreatePdfDirectory().listFiles();
         ArrayList<File> pdfs = searchPdfsFromPdfFolder(files);
@@ -70,31 +70,23 @@ public class DirectoryUtils {
         return searchResult;
     }
 
-    // RETURNING LIST OF FILES OR DIRECTORIES
-
     /**
-     * Used in searchPDF to give the closest result to search query
+     * Checks the number of characters matching between the query and the file name
      *
      * @param query    - Query from search bar
-     * @param fileName - name of PDF file
-     * @return 1 if the search query and filename has same characters , otherwise 0
+     * @param fileName - Name of PDF file
+     * @return 1 if the search query and filename have the same characters, otherwise 0
      */
     private int checkChar(String query, String fileName) {
         query = query.toLowerCase();
         fileName = fileName.toLowerCase();
-        Set<Character> q = new HashSet<>();
-        Set<Character> f = new HashSet<>();
-        for (char c : query.toCharArray()) {
-            q.add(c);
+        int count = 0;
+        for (int i = 0; i < query.length() && i < fileName.length(); i++) {
+            if (query.charAt(i) == fileName.charAt(i)) {
+                count++;
+            }
         }
-        for (char c : fileName.toCharArray()) {
-            f.add(c);
-        }
-
-        if (q.containsAll(f) || f.containsAll(q))
-            return 1;
-
-        return 0;
+        return count == Math.min(query.length(), fileName.length()) ? 1 : 0;
     }
 
     /**
@@ -102,26 +94,12 @@ public class DirectoryUtils {
      *
      * @param files list of files (folder)
      */
-    ArrayList<File> getPdfsFromPdfFolder(File[] files) {
+    private ArrayList<File> getPdfsFromPdfFolder(File[] files) {
         ArrayList<File> pdfFiles = new ArrayList<>();
-        if (files == null)
-            return pdfFiles;
-        for (File file : files) {
-            if (isPDFAndNotDirectory(file))
-                pdfFiles.add(file);
-        }
-        return pdfFiles;
-    }
-
-    private ArrayList<File> searchPdfsFromPdfFolder(File[] files) {
-        ArrayList<File> pdfFiles = getPdfsFromPdfFolder(files);
-        if (files == null)
-            return pdfFiles;
-        for (File file : files) {
-            if (file.isDirectory()) {
-                for (File dirFiles : file.listFiles()) {
-                    if (isPDFAndNotDirectory(dirFiles))
-                        pdfFiles.add(dirFiles);
+        if (files != null) {
+            for (File file : files) {
+                if (isPDFAndNotDirectory(file)) {
+                    pdfFiles.add(file);
                 }
             }
         }
@@ -129,94 +107,50 @@ public class DirectoryUtils {
     }
 
     /**
-     * Checks if a given file is PDF
+     * Searches for PDF files within a directory
      *
-     * @param file - input file
-     * @return tru - if condition satisfies, else false
+     * @param files array of files to search through
+     * @return list of PDF files found
      */
-    private boolean isPDFAndNotDirectory(File file) {
-        return !file.isDirectory() &&
-                file.getName().endsWith(mContext.getString(R.string.pdf_ext));
-    }
-
-    /**
-     * create PDF directory if directory does not exists
-     */
-    public File getOrCreatePdfDirectory() {
-        File folder = new File(mSharedPreferences.getString(STORAGE_LOCATION,
-                StringUtils.getInstance().getDefaultStorageLocation()));
-        if (!folder.exists())
-            folder.mkdir();
-        return folder;
-    }
-
-    /**
-     * get the PDF files stored in directories other than home directory
-     *
-     * @return ArrayList of PDF files
-     */
-    public ArrayList<File> getPdfFromOtherDirectories() {
-        mFilePaths = new ArrayList<>();
-        walkDir(getOrCreatePdfDirectory());
-        ArrayList<File> files = new ArrayList<>();
-        for (String path : mFilePaths)
-            files.add(new File(path));
-        return files;
-    }
-
-    /**
-     * gets a list of all the pdf files on the user device
-     *
-     * @return - list of file absolute paths
-     */
-    ArrayList<String> getAllPDFsOnDevice() {
-        mFilePaths = new ArrayList<>();
-        walkDir(Environment.getExternalStorageDirectory());
-        return mFilePaths;
-    }
-
-    /**
-     * Walks through given dir & sub directory, and append file path to mFilePaths
-     *
-     * @param dir - root directory
-     */
-    private void walkDir(File dir) {
-        walkDir(dir, Collections.singletonList(pdfExtension));
-    }
-
-    /**
-     * Walks through given dir & sub direc, and append file path to mFilePaths
-     *
-     * @param dir        - root directory
-     * @param extensions - a list of file extensions to search for
-     */
-    private void walkDir(File dir, List<String> extensions) {
-        File[] listFile = dir.listFiles();
-        if (listFile != null) {
-            for (File aListFile : listFile) {
-
-                if (aListFile.isDirectory()) {
-                    walkDir(aListFile, extensions);
-                } else {
-                    for (String extension : extensions) {
-                        if (aListFile.getName().endsWith(extension)) {
-                            //Do what ever u want
-                            mFilePaths.add(aListFile.getAbsolutePath());
+    private ArrayList<File> searchPdfsFromPdfFolder(File[] files) {
+        ArrayList<File> pdfFiles = getPdfsFromPdfFolder(files);
+        if (files != null) {
+            for (File file : files) {
+                if (file.isDirectory()) {
+                    for (File dirFiles : file.listFiles()) {
+                        if (isPDFAndNotDirectory(dirFiles)) {
+                            pdfFiles.add(dirFiles);
                         }
                     }
                 }
             }
         }
+        return pdfFiles;
     }
 
     /**
-     * gets a list of all the excel files on the user device
+     * Checks if a given file is a PDF and not a directory
      *
-     * @return - list of file absolute paths
+     * @param file - Input file
+     * @return true if the condition satisfies, else false
      */
-    ArrayList<String> getAllExcelDocumentsOnDevice() {
-        mFilePaths = new ArrayList<>();
-        walkDir(Environment.getExternalStorageDirectory(), Arrays.asList(excelExtension, excelWorkbookExtension));
-        return mFilePaths;
+    private boolean isPDFAndNotDirectory(File file) {
+        return !file.isDirectory() && file.getName().endsWith(mContext.getString(R.string.pdf_ext));
+    }
+
+    /**
+     * Get or create the PDF directory if it does not exist
+     *
+     * @return File representing the PDF directory
+     */
+    public File getOrCreatePdfDirectory() {
+        File folder = new File(mSharedPreferences.getString(STORAGE_LOCATION, StringUtils.getInstance().getDefaultStorageLocation()));
+        if (!folder.exists()) {
+            boolean result = folder.mkdir();
+            if (!result) {
+                Log.e("DirectoryUtils", "Failed to create PDF directory: " + folder.getAbsolutePath());
+            }
+        }
+        return folder;
     }
 }
