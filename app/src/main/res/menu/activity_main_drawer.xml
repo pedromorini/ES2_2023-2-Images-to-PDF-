@@ -126,6 +126,14 @@
                         android:id="@+id/nav_zip_to_pdf"
                         android:icon="@drawable/ic_zip_to_pdf"
                         android:title="@string/zip_to_pdf" />
+                    <item
+                        android:id="@+id/nav_translate_pdf"
+                        android:icon="@drawable/ic_translate_24"
+                        android:title="@string/translate_pdf" />
+                    <item
+                        android:id="@+id/nav_pdf_to_epub"
+                        android:icon="@drawable/ic_pdf_to_epub_24"
+                        android:title="@string/pdf_to_epub" />
                 </group>
             </menu>
         </item>

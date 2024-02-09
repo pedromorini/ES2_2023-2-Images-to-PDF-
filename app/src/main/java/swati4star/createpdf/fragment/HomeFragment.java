@@ -93,6 +93,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     MyCardView extractText;
     @BindView(R.id.add_text)
     MyCardView addText;
+    @BindView(R.id.translate_pdf)
+    MyCardView translatePdf;
+    @BindView(R.id.pdf_to_epub)
+    MyCardView pdfToEpub;
     @BindView(R.id.recent_list)
     RecyclerView recentList;
     @BindView(R.id.recent_lbl)
@@ -133,6 +137,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         excelToPdf.setOnClickListener(this);
         extractText.setOnClickListener(this);
         addText.setOnClickListener(this);
+        translatePdf.setOnClickListener(this);
+        pdfToEpub.setOnClickListener(this);
 
         mAdapter = new RecentListAdapter(this);
         recentList.setAdapter(mAdapter);
@@ -281,6 +287,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.add_text:
                 fragment = new AddTextFragment();
+                break;
+            case R.id.translate_pdf:
+                fragment = new TranslatePdfFragment();
+                break;
+            case R.id.pdf_to_epub:
+                fragment = new PdfToEpubFragment();
                 break;
         }
 

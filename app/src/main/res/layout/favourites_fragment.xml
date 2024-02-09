@@ -276,6 +276,24 @@
                     android:visibility="gone"
                     app:option_icon="@drawable/ic_zip_to_pdf"
                     app:option_text="@string/zip_to_pdf" />
+
+                <swati4star.createpdf.customviews.MyCardView
+                    android:id="@+id/translate_pdf_fav"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:visibility="gone"
+                    app:option_icon="@drawable/ic_translate_24"
+                    app:option_text="@string/translate_pdf" />
+
+                <swati4star.createpdf.customviews.MyCardView
+                    android:id="@+id/pdf_to_epub_fav"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:visibility="gone"
+                    app:option_icon="@drawable/ic_pdf_to_epub_24"
+                    app:option_text="@string/pdf_to_epub" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
