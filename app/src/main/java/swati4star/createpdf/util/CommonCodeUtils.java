@@ -15,18 +15,12 @@ import static swati4star.createpdf.R.drawable.ic_lock_open_black_24dp;
 import static swati4star.createpdf.R.drawable.ic_menu_camera;
 import static swati4star.createpdf.R.drawable.ic_menu_gallery;
 import static swati4star.createpdf.R.drawable.ic_merge_type_black_24dp;
-<<<<<<< HEAD
 import static swati4star.createpdf.R.drawable.ic_pdf_to_epub_24;
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 import static swati4star.createpdf.R.drawable.ic_qrcode_24dp;
 import static swati4star.createpdf.R.drawable.ic_rearrange;
 import static swati4star.createpdf.R.drawable.ic_remove_circle_black_24dp;
 import static swati4star.createpdf.R.drawable.ic_text_format_black_24dp;
-<<<<<<< HEAD
 import static swati4star.createpdf.R.drawable.ic_translate_24;
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 import static swati4star.createpdf.R.drawable.ic_zip_to_pdf;
 import static swati4star.createpdf.R.id.add_images;
 import static swati4star.createpdf.R.id.add_images_fav;
@@ -58,10 +52,7 @@ import static swati4star.createpdf.R.id.nav_gallery;
 import static swati4star.createpdf.R.id.nav_history;
 import static swati4star.createpdf.R.id.nav_invert_pdf;
 import static swati4star.createpdf.R.id.nav_merge;
-<<<<<<< HEAD
 import static swati4star.createpdf.R.id.nav_pdf_to_epub;
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 import static swati4star.createpdf.R.id.nav_pdf_to_images;
 import static swati4star.createpdf.R.id.nav_qrcode;
 import static swati4star.createpdf.R.id.nav_rearrange_pages;
@@ -71,13 +62,9 @@ import static swati4star.createpdf.R.id.nav_remove_password;
 import static swati4star.createpdf.R.id.nav_split;
 import static swati4star.createpdf.R.id.nav_text_extract;
 import static swati4star.createpdf.R.id.nav_text_to_pdf;
-<<<<<<< HEAD
 import static swati4star.createpdf.R.id.nav_translate_pdf;
 import static swati4star.createpdf.R.id.nav_zip_to_pdf;
 import static swati4star.createpdf.R.id.pdf_to_epub_fav;
-=======
-import static swati4star.createpdf.R.id.nav_zip_to_pdf;
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 import static swati4star.createpdf.R.id.pdf_to_images;
 import static swati4star.createpdf.R.id.pdf_to_images_fav;
 import static swati4star.createpdf.R.id.qr_barcode_to_pdf;
@@ -96,10 +83,7 @@ import static swati4star.createpdf.R.id.split_pdf;
 import static swati4star.createpdf.R.id.split_pdf_fav;
 import static swati4star.createpdf.R.id.text_to_pdf;
 import static swati4star.createpdf.R.id.text_to_pdf_fav;
-<<<<<<< HEAD
 import static swati4star.createpdf.R.id.translate_pdf_fav;
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 import static swati4star.createpdf.R.id.view_files;
 import static swati4star.createpdf.R.id.view_files_fav;
 import static swati4star.createpdf.R.id.view_history;
@@ -257,13 +241,10 @@ public class CommonCodeUtils {
                 nav_zip_to_pdf, ic_zip_to_pdf, R.string.zip_to_pdf);
         addFragmentPosition(homePageItems, R.id.add_text, add_text_fav,
                 nav_add_text, ic_text_format_black_24dp, R.string.add_text);
-<<<<<<< HEAD
         addFragmentPosition(homePageItems, R.id.translate_pdf, translate_pdf_fav,
                 nav_translate_pdf, ic_translate_24, R.string.translate_pdf);
         addFragmentPosition(homePageItems, R.id.pdf_to_epub, pdf_to_epub_fav,
                 nav_pdf_to_epub, ic_pdf_to_epub_24, R.string.pdf_to_epub);
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
         return mFragmentPositionMap;
     }
 
