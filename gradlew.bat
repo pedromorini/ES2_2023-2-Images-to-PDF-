@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @rem
 @rem Copyright 2015 the original author or authors.
 @rem
@@ -178,4 +177,4 @@ exit /b 1
 if "%OS%"=="Windows_NT" endlocal
 
 :omega
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
+
