@@ -39,7 +39,8 @@ public class NovidadesUtil {
         titulo.setText(R.string.whatsnew_title);
         try {
             JSONObject obj = new JSONObject(carregarJSONDoAsset(contexto));
-            NovidadesAdapter novidadesAdapter = new NovidadesAdapter(contexto, extrairItensDoJSON(obj));
+            List<OQueHaDeNovo> novidades = extrairItensDoJSON(obj);
+            NovidadesAdapter novidadesAdapter = new NovidadesAdapter(contexto, novidades);
             LinearLayoutManager layoutManager = new LinearLayoutManager(contexto, LinearLayoutManager.VERTICAL, false);
             recyclerView.setLayoutManager(layoutManager);
             recyclerView.setAdapter(novidadesAdapter);
@@ -56,11 +57,11 @@ public class NovidadesUtil {
             InputStream inputStream = contexto.getAssets().open("whatsnew.json");
             int tamanho = inputStream.available();
             byte[] buffer = new byte[tamanho];
-            int bytesLidos = inputStream.read(buffer);
-            if (bytesLidos != -1) {
-                json = new String(buffer, 0, bytesLidos, StandardCharsets.UTF_8);
-            }
+            int bytesRead = inputStream.read(buffer);
             inputStream.close();
+            if (bytesRead != -1) {
+                json = new String(buffer, 0, bytesRead, StandardCharsets.UTF_8);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -73,9 +74,9 @@ public class NovidadesUtil {
             JSONArray dados = objeto.getJSONArray("dados");
             for (int i = 0; i < dados.length(); i++) {
                 JSONObject jsonObject = dados.getJSONObject(i);
-                String titulo = jsonObject.getString("titulo");
-                String conteudo = jsonObject.getString("conteudo");
-                String iconeLocalizacao = jsonObject.getString("icone");
+                String titulo = jsonObject.optString("titulo");
+                String conteudo = jsonObject.optString("conteudo");
+                String iconeLocalizacao = jsonObject.optString("icone");
                 OQueHaDeNovo novidade = new OQueHaDeNovo(titulo, conteudo, iconeLocalizacao);
                 listaNovidades.add(novidade);
             }
