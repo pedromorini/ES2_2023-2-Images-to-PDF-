@@ -45,20 +45,14 @@ import swati4star.createpdf.fragment.HomeFragment;
 import swati4star.createpdf.fragment.ImageToPdfFragment;
 import swati4star.createpdf.fragment.InvertPdfFragment;
 import swati4star.createpdf.fragment.MergeFilesFragment;
-<<<<<<< HEAD
 import swati4star.createpdf.fragment.PdfToEpubFragment;
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 import swati4star.createpdf.fragment.PdfToImageFragment;
 import swati4star.createpdf.fragment.QrBarcodeScanFragment;
 import swati4star.createpdf.fragment.RemoveDuplicatePagesFragment;
 import swati4star.createpdf.fragment.RemovePagesFragment;
 import swati4star.createpdf.fragment.SettingsFragment;
 import swati4star.createpdf.fragment.SplitFilesFragment;
-<<<<<<< HEAD
 import swati4star.createpdf.fragment.TranslatePdfFragment;
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 import swati4star.createpdf.fragment.ViewFilesFragment;
 import swati4star.createpdf.fragment.ZipToPdfFragment;
 import swati4star.createpdf.fragment.texttopdf.TextToPdfFragment;
@@ -262,15 +256,12 @@ public class FragmentManagement implements IFragmentManagement {
             case R.id.nav_faq:
                 fragment = new FAQFragment();
                 break;
-<<<<<<< HEAD
             case R.id.nav_translate_pdf:
                 fragment = new TranslatePdfFragment();
                 break;
             case R.id.nav_pdf_to_epub:
                 fragment = new PdfToEpubFragment();
                 break;
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
         }
 
         try {
