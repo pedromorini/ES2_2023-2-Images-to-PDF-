@@ -357,7 +357,6 @@
                 app:option_icon="@drawable/ic_zip_to_pdf"
                 app:option_text="@string/zip_to_pdf" />
         </LinearLayout>
-<<<<<<< HEAD
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -380,8 +379,6 @@
                 app:option_icon="@drawable/ic_pdf_to_epub_24"
                 app:option_text="@string/pdf_to_epub" />
         </LinearLayout>
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
     </LinearLayout>
 
 </ScrollView>
