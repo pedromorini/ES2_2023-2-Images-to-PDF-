@@ -18,10 +18,7 @@ import static swati4star.createpdf.util.Constants.HISTORY_KEY;
 import static swati4star.createpdf.util.Constants.IMAGE_TO_PDF_KEY;
 import static swati4star.createpdf.util.Constants.INVERT_PDF_KEY;
 import static swati4star.createpdf.util.Constants.MERGE_PDF_KEY;
-<<<<<<< HEAD
 import static swati4star.createpdf.util.Constants.PDF_TO_EPUB_KEY;
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 import static swati4star.createpdf.util.Constants.PDF_TO_IMAGES;
 import static swati4star.createpdf.util.Constants.PDF_TO_IMAGES_KEY;
 import static swati4star.createpdf.util.Constants.QR_BARCODE_KEY;
@@ -36,17 +33,11 @@ import static swati4star.createpdf.util.Constants.ROTATE_PAGES;
 import static swati4star.createpdf.util.Constants.ROTATE_PAGES_KEY;
 import static swati4star.createpdf.util.Constants.SPLIT_PDF_KEY;
 import static swati4star.createpdf.util.Constants.TEXT_TO_PDF_KEY;
-<<<<<<< HEAD
 import static swati4star.createpdf.util.Constants.TRANSLATE_PDF_KEY;
 import static swati4star.createpdf.util.Constants.VIEW_FILES_KEY;
 import static swati4star.createpdf.util.Constants.ZIP_TO_PDF_KEY;
 
 
-=======
-import static swati4star.createpdf.util.Constants.VIEW_FILES_KEY;
-import static swati4star.createpdf.util.Constants.ZIP_TO_PDF_KEY;
-
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -131,13 +122,10 @@ public class FavouritesFragment extends Fragment
     TextView favouritesText;
     @BindView(R.id.zip_to_pdf_fav)
     MyCardView pref_zip_to_pdf;
-<<<<<<< HEAD
     @BindView(R.id.translate_pdf_fav)
     MyCardView pref_translate_pdf;
     @BindView(R.id.pdf_to_epub_fav)
     MyCardView pref_pdf_to_epub;
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
     private SharedPreferences mSharedpreferences;
     private boolean mDoesFavouritesExist;
     private Activity mActivity;
@@ -192,11 +180,8 @@ public class FavouritesFragment extends Fragment
         pref_invert_pdf.setOnClickListener(this);
         pref_excel_to_pdf.setOnClickListener(this);
         pref_zip_to_pdf.setOnClickListener(this);
-<<<<<<< HEAD
         pref_translate_pdf.setOnClickListener(this);
         pref_pdf_to_epub.setOnClickListener(this);
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 
     }
 
@@ -244,11 +229,8 @@ public class FavouritesFragment extends Fragment
         viewVisibility(pref_pdf_to_img, PDF_TO_IMAGES_KEY);
         viewVisibility(pref_excel_to_pdf, EXCEL_TO_PDF_KEY);
         viewVisibility(pref_zip_to_pdf, ZIP_TO_PDF_KEY);
-<<<<<<< HEAD
         viewVisibility(pref_translate_pdf, TRANSLATE_PDF_KEY);
         viewVisibility(pref_pdf_to_epub, PDF_TO_EPUB_KEY);
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 
         // if there are no favourites then show favourites animation and text
         if (!mDoesFavouritesExist) {
@@ -384,15 +366,12 @@ public class FavouritesFragment extends Fragment
             case R.id.zip_to_pdf_fav:
                 fragment = new ZipToPdfFragment();
                 break;
-<<<<<<< HEAD
             case R.id.translate_pdf_fav:
                 fragment = new TranslatePdfFragment();
                 break;
             case R.id.pdf_to_epub_fav:
                 fragment = new PdfToEpubFragment();
                 break;
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
         }
         try {
             if (fragment != null && fragmentManager != null) {
