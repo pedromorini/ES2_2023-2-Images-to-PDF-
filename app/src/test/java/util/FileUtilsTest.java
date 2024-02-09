@@ -5,15 +5,12 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.Mockito.when;
 import static swati4star.createpdf.util.FileUtils.getFileName;
 
-<<<<<<< HEAD
 import android.app.Activity;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.Assert;
-=======
 import org.junit.Before;
 import org.junit.Test;
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
@@ -63,33 +60,26 @@ public class FileUtilsTest {
     }
 
     @Test
-<<<<<<< HEAD
     public void when_CallingStaticGetFileName_NULL_Expect_NULL() {
         Assert.assertNull(FileUtils.getFileName((String) null));
     }
 
     @Test
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
     public void when_CallingGetFileNameWithoutExtension_Expect_CorrectValueReturned() {
         assertThat(FileUtils.getFileNameWithoutExtension(FILE_PATH + FILE_NAME), is("c"));
         assertThat(FileUtils.getFileNameWithoutExtension(""), is(""));
     }
 
     @Test
-<<<<<<< HEAD
     public void when_CallingGetFileNameWithoutExtension_NULL_Expect_NULL() {
         Assert.assertNull(FileUtils.getFileNameWithoutExtension(null));
     }
 
     @Test
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
     public void when_CallingGetFileDirectoryPath_Expect_CorrectValueReturned() {
         assertThat(FileUtils.getFileDirectoryPath(FILE_PATH + FILE_NAME), is(FILE_PATH));
         assertThat(FileUtils.getFileDirectoryPath(""), is(""));
     }
-<<<<<<< HEAD
 
     @Test
     public void when_stripExtension_Expect_CorrectValueReturned() {
@@ -98,7 +88,4 @@ public class FileUtilsTest {
         assertThat(utils.stripExtension("c"), is("c"));
         Assert.assertNull(utils.stripExtension(null));
     }
-
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 }
