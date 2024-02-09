@@ -481,15 +481,12 @@
     <string name="error_no_image_in_zip">O arquivo ZIP não contém imagem</string>
     <string name="error_open_file">Ocorreu um erro ao abrir o arquivo. Por favor, tente reabri-lo</string>
 
-<<<<<<< HEAD
     <!--translate pdf-->
     <string name="translate_pdf">Traduzir PDF</string>
 
     <!--pdf to epub-->
     <string name="pdf_to_epub">PDF para ePUB</string>
 
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
     <!--text to pdf-->
     <string name="error_pdf_not_created">Desculpe, o PDF não foi criado. Por favor, tente novamente</string>
 
