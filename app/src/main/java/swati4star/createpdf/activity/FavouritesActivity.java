@@ -10,10 +10,7 @@ import static swati4star.createpdf.util.Constants.HISTORY_KEY;
 import static swati4star.createpdf.util.Constants.IMAGE_TO_PDF_KEY;
 import static swati4star.createpdf.util.Constants.INVERT_PDF_KEY;
 import static swati4star.createpdf.util.Constants.MERGE_PDF_KEY;
-<<<<<<< HEAD
 import static swati4star.createpdf.util.Constants.PDF_TO_EPUB_KEY;
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 import static swati4star.createpdf.util.Constants.PDF_TO_IMAGES_KEY;
 import static swati4star.createpdf.util.Constants.QR_BARCODE_KEY;
 import static swati4star.createpdf.util.Constants.REMOVE_DUPLICATE_PAGES_KEY;
@@ -23,10 +20,7 @@ import static swati4star.createpdf.util.Constants.REORDER_PAGES_KEY;
 import static swati4star.createpdf.util.Constants.ROTATE_PAGES_KEY;
 import static swati4star.createpdf.util.Constants.SPLIT_PDF_KEY;
 import static swati4star.createpdf.util.Constants.TEXT_TO_PDF_KEY;
-<<<<<<< HEAD
 import static swati4star.createpdf.util.Constants.TRANSLATE_PDF_KEY;
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 import static swati4star.createpdf.util.Constants.VIEW_FILES_KEY;
 import static swati4star.createpdf.util.Constants.ZIP_TO_PDF_KEY;
 
@@ -46,11 +40,7 @@ import swati4star.createpdf.R;
 
 public class FavouritesActivity extends AppCompatActivity {
 
-<<<<<<< HEAD
     private final boolean[] mKeyState = new boolean[23];
-=======
-    private final boolean[] mKeyState = new boolean[21];
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
     private SharedPreferences mSharedPreferences;
 
     @Override
@@ -122,11 +112,8 @@ public class FavouritesActivity extends AppCompatActivity {
         mKeyState[18] = mSharedPreferences.getBoolean(PDF_TO_IMAGES_KEY, false);
         mKeyState[19] = mSharedPreferences.getBoolean(EXCEL_TO_PDF_KEY, false);
         mKeyState[20] = mSharedPreferences.getBoolean(ZIP_TO_PDF_KEY, false);
-<<<<<<< HEAD
         mKeyState[21] = mSharedPreferences.getBoolean(TRANSLATE_PDF_KEY, false);
         mKeyState[22] = mSharedPreferences.getBoolean(PDF_TO_EPUB_KEY, false);
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
     }
 
     /**
@@ -155,10 +142,7 @@ public class FavouritesActivity extends AppCompatActivity {
         mSharedPreferences.edit().putBoolean(PDF_TO_IMAGES_KEY, mKeyState[18]).apply();
         mSharedPreferences.edit().putBoolean(EXCEL_TO_PDF_KEY, mKeyState[19]).apply();
         mSharedPreferences.edit().putBoolean(ZIP_TO_PDF_KEY, mKeyState[20]).apply();
-<<<<<<< HEAD
         mSharedPreferences.edit().putBoolean(TRANSLATE_PDF_KEY, mKeyState[21]).apply();
         mSharedPreferences.edit().putBoolean(PDF_TO_EPUB_KEY, mKeyState[22]).apply();
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
     }
 }
