@@ -1,25 +1,19 @@
-package swati4star.createpdf.activity;
+package my_package_name.createpdf.activity;
 
-import static swati4star.createpdf.util.Constants.PREVIEW_IMAGES;
-
+import static my_package_name.createpdf.util.Constants.PREVIEW_IMAGES;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-
 import com.eftimoff.viewpagertransformers.DepthPageTransformer;
-
 import java.util.ArrayList;
-
 import butterknife.ButterKnife;
-import swati4star.createpdf.R;
-import swati4star.createpdf.adapter.PreviewAdapter;
-import swati4star.createpdf.util.ThemeUtils;
+import my_package_name.createpdf.R;
+import my_package_name.createpdf.adapter.PreviewAdapter;
+import my_package_name.createpdf.util.ThemeUtils;
 
 public class ImagesPreviewActivity extends AppCompatActivity {
-
     /**
      * get start intent for this activity
      *
@@ -38,12 +32,10 @@ public class ImagesPreviewActivity extends AppCompatActivity {
         ThemeUtils.getInstance().setThemeApp(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preview_images);
-
         ButterKnife.bind(this);
         // Extract mImagesArrayList uri array from the intent
         Intent intent = getIntent();
         ArrayList<String> mImagesArrayList = intent.getStringArrayListExtra(PREVIEW_IMAGES);
-
         ViewPager mViewPager = findViewById(R.id.viewpager);
         PreviewAdapter mPreviewAdapter = new PreviewAdapter(this, mImagesArrayList);
         mViewPager.setAdapter(mPreviewAdapter);
