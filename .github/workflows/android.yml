@@ -17,12 +17,6 @@ jobs:
         java-package: adopt
         distribution: 'adopt'
         architecture: x64
-        check-latest: false
-        server-id: github
-        server-username: ${{ github.actor }}
-        server-password: ${{ secrets.GITHUB_TOKEN }}
-        overwrite-settings: true
-        job-status: success
 
     - name: Instalar dependências
       run: ./gradlew dependencies --info
