@@ -1,45 +1,41 @@
-package swati4star.createpdf.util;
-
-import static android.os.ParcelFileDescriptor.MODE_READ_ONLY;
-import static swati4star.createpdf.util.FileUtils.getFileNameWithoutExtension;
-import static swati4star.createpdf.util.ImageUtils.saveImage;
+package pacoteswati4star.createpdf.util;
 
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.pdf.PdfRenderer;
+import android.graphics.PdfRenderer;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.ParcelFileDescriptor;
-
+import android.util.Log;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-
+import java.util.List;
 import swati4star.createpdf.interfaces.ExtractImagesListener;
 
-public class PdfToImages extends AsyncTask<Void, Void, Void> {
+public class PDFToImages extends AsyncTask<Void, Void, Void> {
 
     private final String mPath;
     private final Uri mUri;
     private final ExtractImagesListener mExtractImagesListener;
-    private final String[] mPassword;
+    private final String[] mSenha;
     private final Context mContext;
     private int mImagesCount = 0;
-    private ArrayList<String> mOutputFilePaths;
+    private List<String> mOutputFilePaths;
     private PDFEncryptionUtility mPDFEncryptionUtility;
     private String mDecryptedPath;
 
-    public PdfToImages(Context context, String[] password, String mPath, Uri mUri,
-                       ExtractImagesListener mExtractImagesListener) {
-        this.mPath = mPath;
-        this.mUri = mUri;
-        this.mExtractImagesListener = mExtractImagesListener;
-        mOutputFilePaths = new ArrayList<>();
-        this.mPassword = password;
-        this.mContext = context;
+    public PDFToImages(Context contexto, String[] senha, String path, Uri uri,
+                       ExtractImagesListener extractImagesListener) {
+        this.mPath = path;
+        this.mUri = uri;
+        this.mExtractImagesListener = extractImagesListener;
+        this.mOutputFilePaths = new ArrayList<>();
+        this.mSenha = senha;
+        this.mContext = contexto;
     }
 
     @Override
@@ -51,24 +47,21 @@ public class PdfToImages extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected Void doInBackground(Void... voids) {
-        if (mPassword != null) {
-            mDecryptedPath = mPDFEncryptionUtility.removeDefPasswordForImages(mPath, mPassword);
+        if (mSenha != null) {
+            mDecryptedPath = mPDFEncryptionUtility.removeDefPasswordForImages(mPath, mSenha);
         }
         mOutputFilePaths = new ArrayList<>();
         mImagesCount = 0;
 
-        // Render pdf pages as bitmap
         ParcelFileDescriptor fileDescriptor = null;
         try {
             if (mDecryptedPath != null)
-                fileDescriptor = ParcelFileDescriptor.open(new File(mDecryptedPath), MODE_READ_ONLY);
+                fileDescriptor = ParcelFileDescriptor.open(new File(mDecryptedPath), ParcelFileDescriptor.MODE_READ_ONLY);
             else {
                 if (mUri != null && mContext != null) {
-                    // resolve pdf file path based on uri
                     fileDescriptor = mContext.getContentResolver().openFileDescriptor(mUri, "r");
                 } else if (mPath != null) {
-                    // resolve pdf file path based on relative path
-                    fileDescriptor = ParcelFileDescriptor.open(new File(mPath), MODE_READ_ONLY);
+                    fileDescriptor = ParcelFileDescriptor.open(new File(mPath), ParcelFileDescriptor.MODE_READ_ONLY);
                 }
             }
             if (fileDescriptor != null) {
@@ -76,29 +69,20 @@ public class PdfToImages extends AsyncTask<Void, Void, Void> {
                 final int pageCount = renderer.getPageCount();
                 for (int i = 0; i < pageCount; i++) {
                     PdfRenderer.Page page = renderer.openPage(i);
-                    // generate bitmaps for individual pdf pages
-                    Bitmap bitmap = Bitmap.createBitmap(page.getWidth(), page.getHeight(),
-                            Bitmap.Config.ARGB_8888);
+                    Bitmap bitmap = Bitmap.createBitmap(page.getWidth(), page.getHeight(), Bitmap.Config.ARGB_8888);
                     Canvas canvas = new Canvas(bitmap);
                     canvas.drawColor(Color.WHITE);
                     canvas.drawBitmap(bitmap, 0, 0, null);
-                    // say we render for showing on the screen
                     page.render(bitmap, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY);
-
-                    // close the page
                     page.close();
-
-                    // generate numbered image file names
-                    String filename = getFileNameWithoutExtension(mPath) +
+                    String fileName = FileUtils.getFileNameWithoutExtension(mPath) +
                             "_" + (i + 1);
-                    String path = saveImage(filename, bitmap);
+                    String path = ImageUtils.saveImage(fileName, bitmap);
                     if (path != null) {
                         mOutputFilePaths.add(path);
                         mImagesCount++;
                     }
                 }
-
-                // close the renderer
                 renderer.close();
             }
         } catch (IOException | SecurityException e) {
@@ -111,7 +95,11 @@ public class PdfToImages extends AsyncTask<Void, Void, Void> {
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
         mExtractImagesListener.updateView(mImagesCount, mOutputFilePaths);
-        if (mDecryptedPath != null)
-            new File(mDecryptedPath).delete();
+        if (mDecryptedPath != null) {
+            boolean deleteSuccess = new File(mDecryptedPath).delete();
+            if (!deleteSuccess) {
+                Log.e("PDFToImages", "Failed to delete file: " + mDecryptedPath);
+            }
+        }
     }
 }
