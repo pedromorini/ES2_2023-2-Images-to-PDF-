@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main  # Executar apenas quando houver push na branch main
+      - master  
 
 jobs:
   build:
@@ -17,7 +17,8 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '11'
-
+        distribution: 'adopt'
+        
     - name: Instalar dependências
       run: ./gradlew dependencies --info
 
