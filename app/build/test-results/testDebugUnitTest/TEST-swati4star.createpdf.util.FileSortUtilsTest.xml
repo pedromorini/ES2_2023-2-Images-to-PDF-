@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="swati4star.createpdf.util.FileSortUtilsTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-02-09T06:05:49" hostname="CARROCA" time="2.675">
+  <properties/>
+  <testcase name="shouldReturnArraySortedByDescendingSize" classname="swati4star.createpdf.util.FileSortUtilsTest" time="2.273"/>
+  <testcase name="shouldReturnArraySortedNewestToOldest" classname="swati4star.createpdf.util.FileSortUtilsTest" time="0.008"/>
+  <testcase name="shouldReturnArraySortedAlphabetically" classname="swati4star.createpdf.util.FileSortUtilsTest" time="0.384"/>
+  <testcase name="shouldReturnArraySortedByAscendingSize" classname="swati4star.createpdf.util.FileSortUtilsTest" time="0.004"/>
+  <testcase name="shouldThrowOnInvalidSortOption" classname="swati4star.createpdf.util.FileSortUtilsTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

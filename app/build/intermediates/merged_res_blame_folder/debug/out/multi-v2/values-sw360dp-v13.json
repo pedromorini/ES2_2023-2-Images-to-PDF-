@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\Aprendendo\\UFSCar\\8-Periodo\\ES2\\Projeto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\pedro\\.gradle\\caches\\transforms-3\\ffa5ec184195b4da8a21aaf8d67c7eec\\transformed\\jetified-color-picker-view-1.4.0\\res\\values-sw360dp\\values-sw360dp.xml",
+                    "from": {
+                        "startLines": "4,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "192,262,469",
+                        "endLines": "4,5,11",
+                        "endColumns": "69,68,12",
+                        "endOffsets": "257,326,652"
+                    },
+                    "to": {
+                        "startLines": "3,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "127,197,266",
+                        "endLines": "3,4,8",
+                        "endColumns": "69,68,12",
+                        "endOffsets": "192,261,449"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\pedro\\.gradle\\caches\\transforms-3\\96aba5060f582aa39439639081435045\\transformed\\preference-1.2.0\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "71",
+                        "endOffsets": "122"
+                    }
+                }
+            ]
+        }
+    ]
+}

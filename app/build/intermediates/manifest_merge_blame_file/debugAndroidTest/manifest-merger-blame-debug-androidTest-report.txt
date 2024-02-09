@@ -1,0 +1,34 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="swati4star.createpdf.test" >
+4
+5    <uses-sdk
+5-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest12840259914708661168.xml:5:5-74
+6        android:minSdkVersion="23"
+6-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest12840259914708661168.xml:5:15-41
+7        android:targetSdkVersion="33" />
+7-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest12840259914708661168.xml:5:42-71
+8
+9    <instrumentation
+9-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest12840259914708661168.xml:11:5-15:70
+10        android:name="androidx.test.runner.AndroidJUnitRunner"
+10-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest12840259914708661168.xml:11:22-76
+11        android:functionalTest="false"
+11-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest12840259914708661168.xml:14:22-52
+12        android:handleProfiling="false"
+12-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest12840259914708661168.xml:13:22-53
+13        android:label="Tests for swati4star.createpdf"
+13-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest12840259914708661168.xml:15:22-68
+14        android:targetPackage="swati4star.createpdf" />
+14-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest12840259914708661168.xml:12:22-66
+15
+16    <application
+16-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest12840259914708661168.xml:7:5-9:19
+17        android:debuggable="true"
+18        android:extractNativeLibs="false" >
+19        <uses-library android:name="android.test.runner" />
+19-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest12840259914708661168.xml:8:9-60
+19-->D:\Aprendendo\UFSCar\8-Periodo\ES2\Projeto\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest12840259914708661168.xml:8:23-57
+20    </application>
+21
+22</manifest>
