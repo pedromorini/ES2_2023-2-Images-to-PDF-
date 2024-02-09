@@ -19,19 +19,13 @@ import swati4star.createpdf.fragment.HistoryFragment;
 import swati4star.createpdf.fragment.ImageToPdfFragment;
 import swati4star.createpdf.fragment.InvertPdfFragment;
 import swati4star.createpdf.fragment.MergeFilesFragment;
-<<<<<<< HEAD
 import swati4star.createpdf.fragment.PdfToEpubFragment;
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 import swati4star.createpdf.fragment.PdfToImageFragment;
 import swati4star.createpdf.fragment.QrBarcodeScanFragment;
 import swati4star.createpdf.fragment.RemoveDuplicatePagesFragment;
 import swati4star.createpdf.fragment.RemovePagesFragment;
 import swati4star.createpdf.fragment.SplitFilesFragment;
-<<<<<<< HEAD
 import swati4star.createpdf.fragment.TranslatePdfFragment;
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 import swati4star.createpdf.fragment.ViewFilesFragment;
 import swati4star.createpdf.fragment.ZipToPdfFragment;
 import swati4star.createpdf.fragment.texttopdf.TextToPdfFragment;
@@ -77,13 +71,10 @@ public class FragmentUtils {
             name = mContext.getString(R.string.pdf_to_images);
         } else if (fragment instanceof ZipToPdfFragment) {
             name = mContext.getString(R.string.zip_to_pdf);
-<<<<<<< HEAD
         } else if (fragment instanceof TranslatePdfFragment) {
             name = mContext.getString(R.string.translate_pdf);
         } else if (fragment instanceof PdfToEpubFragment) {
             name = mContext.getString(R.string.pdf_to_epub);
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
         }
         return name;
     }
