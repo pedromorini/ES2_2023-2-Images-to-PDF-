@@ -444,29 +444,35 @@ public class ImageToPdfFragment extends Fragment implements OnItemClickListener,
     /**
      * Saves Images with gray scale filter
      */
+    /**
+     * Saves Images with gray scale filter
+     */
     private void saveImagesInGrayScale() {
         ArrayList<String> tempImageUri = new ArrayList<>();
         try {
             File sdCard = Environment.getExternalStorageDirectory();
             File dir = new File(sdCard.getAbsolutePath() + "/PDFfilter");
             dir.mkdirs();
-
             int size = mImagesUri.size();
             for (int i = 0; i < size; i++) {
                 String fileName = String.format(getString(R.string.filter_file_name),
                         String.valueOf(System.currentTimeMillis()), i + "_grayscale");
                 File outFile = new File(dir, fileName);
-
-                File f = new File(mImagesUri.get(i));
-                FileInputStream fis = new FileInputStream(f);
-                Bitmap bitmap = BitmapFactory.decodeStream(fis);
-                Bitmap grayScaleBitmap = ImageUtils.getInstance().toGrayscale(bitmap);
-
-                outFile.createNewFile();
-                BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(outFile), 1024 * 8);
-                grayScaleBitmap.compress(Bitmap.CompressFormat.JPEG, 100, bos);
-                bos.close(); // Includes flushing the stream and closing the FileOutputStream
-                tempImageUri.add(outFile.getAbsolutePath());
+                if (outFile.createNewFile()) {
+                    File f = new File(mImagesUri.get(i));
+                    FileInputStream fis = new FileInputStream(f);
+                    Bitmap bitmap = BitmapFactory.decodeStream(fis);
+                    Bitmap grayScaleBitmap = ImageUtils.getInstance().toGrayscale(bitmap);
+                    BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(outFile), 1024 * 8);
+                    grayScaleBitmap.compress(Bitmap.CompressFormat.JPEG, 100, bos);
+                    bos.close(); // Includes flushing the stream and closing the FileOutputStream
+                    tempImageUri.add(outFile.getAbsolutePath());
+                } else {
+                    // Tratar o caso em que a criação do arquivo falhou
+                    // Aqui você pode lançar uma exceção, mostrar uma mensagem de erro, etc.
+                    // Por exemplo:
+                    throw new IOException("Failed to create file: " + outFile.getAbsolutePath());
+                }
             }
             mImagesUri.clear();
             mImagesUri.addAll(tempImageUri);
