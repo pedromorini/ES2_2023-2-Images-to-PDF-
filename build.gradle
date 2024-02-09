@@ -10,16 +10,11 @@ buildscript {
     }
     dependencies {
 
-<<<<<<< HEAD
         classpath 'com.android.tools.build:gradle:8.2.2'
-=======
-        classpath 'com.android.tools.build:gradle:7.0.4'
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
         classpath 'com.google.gms:google-services:4.3.15'
     }
-<<<<<<< HEAD
 
     plugins {
         id "org.sonarqube" version "4.4.1.3373"
@@ -32,8 +27,6 @@ buildscript {
             property "sonar.host.url", "https://sonarcloud.io"
         }
     }
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 }
 
 allprojects {
@@ -46,8 +39,3 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
