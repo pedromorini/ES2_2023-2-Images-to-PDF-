@@ -1,12 +1,12 @@
-name: Testes e Cobertura de Código
+name: CI/CD Pipeline
 
 on:
   push:
     branches:
-      - master  # Executar apenas quando houver push na branch main
+      - main  # Executar apenas quando houver push na branch main
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     
     steps:
@@ -18,10 +18,49 @@ jobs:
       with:
         java-version: '11'
 
-    - name: Executar testes
-      run: ./gradlew clean test --info
+    - name: Instalar dependências
+      run: ./gradlew dependencies --info
 
-    - name: Cobertura de Código com Codecov
-      uses: codecov/codecov-action@v2
+    - name: Compilar código
+      run: ./gradlew build --info
+
+    - name: Executar testes unitários
+      run: ./gradlew test --info
+
+    - name: Testes de integração
+      run: |
+        # Adicione aqui comandos para executar testes de integração
+
+    - name: Análise estática de código
+      run: |
+        # Adicione aqui comandos para executar análise estática de código
+
+    - name: Gerar artefatos
+      run: |
+        # Adicione aqui comandos para gerar artefatos do aplicativo
+
+    - name: Publicar artefatos
+      uses: actions/upload-artifact@v2
       with:
-        token: ${{ secrets.CODECOV_TOKEN }}  # Token de acesso do Codecov
+        name: artifacts
+        path: path/to/artifacts
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: success()
+
+    steps:
+    - name: Deploy em ambiente de teste
+      run: |
+        # Adicione aqui os comandos de implantação em seu ambiente de teste
+
+  deploy_production:
+    needs: deploy
+    runs-on: ubuntu-latest
+    if: success() && github.ref == 'refs/heads/main'
+
+    steps:
+    - name: Deploy em ambiente de produção
+      run: |
+        # Adicione aqui os comandos de implantação em seu ambiente de produção
