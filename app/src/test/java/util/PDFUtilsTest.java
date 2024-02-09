@@ -27,10 +27,17 @@ public class PDFUtilsTest {
         // 24>SplitPDFUtils
         assertThat(SplitPDFUtils.checkRangeValidity(NUM_OF_PAGES, new String[]{"1", "2", "24"}), is(ERROR_PAGE_NUMBER));
         assertThat(SplitPDFUtils.checkRangeValidity(NUM_OF_PAGES, new String[]{"1-8", "24"}), is(ERROR_PAGE_NUMBER));
+        assertThat(SplitPDFUtils.checkRangeValidity(NUM_OF_PAGES, new String[]{"24-8", "23"}), is(ERROR_PAGE_NUMBER));
+        assertThat(SplitPDFUtils.checkRangeValidity(NUM_OF_PAGES, new String[]{"1-24", "23"}), is(ERROR_PAGE_NUMBER));
         // 0 is invalid page number
         assertThat(SplitPDFUtils.checkRangeValidity(
                         NUM_OF_PAGES,
                         new String[]{"0", "2", "3-9"}),
+                is(ERROR_PAGE_NUMBER)
+        );
+        assertThat(SplitPDFUtils.checkRangeValidity(
+                        NUM_OF_PAGES,
+                        new String[]{"1-0", "2", "3-9"}),
                 is(ERROR_PAGE_NUMBER)
         );
         //0-2 range is invalid as page 0 in invalid
@@ -45,6 +52,8 @@ public class PDFUtilsTest {
     public void checkRangeIncorrectRangeReturnsErrorRange() {
         //invalid range 3-1
         assertThat(SplitPDFUtils.checkRangeValidity(NUM_OF_PAGES, new String[]{"1", "2", "3-1"}), is(ERROR_RANGE));
+        // Invalid range 3-3
+        assertThat(SplitPDFUtils.checkRangeValidity(NUM_OF_PAGES, new String[]{"1", "2", "3-3"}), is(ERROR_RANGE));
     }
 
     @Test
@@ -53,6 +62,24 @@ public class PDFUtilsTest {
         assertThat(SplitPDFUtils.checkRangeValidity(
                         NUM_OF_PAGES,
                         new String[]{"1", "", "2", "3-9"}),
+                is(ERROR_INVALID_INPUT)
+        );
+        // Empty array
+        assertThat(SplitPDFUtils.checkRangeValidity(
+                        NUM_OF_PAGES,
+                        new String[]{}),
+                        is(ERROR_INVALID_INPUT)
+        );
+        // Not integer
+        assertThat(SplitPDFUtils.checkRangeValidity(
+                        NUM_OF_PAGES,
+                        new String[]{"1", "b", "2", "3-9"}),
+                is(ERROR_INVALID_INPUT)
+        );
+        // Not integer
+        assertThat(SplitPDFUtils.checkRangeValidity(
+                        NUM_OF_PAGES,
+                        new String[]{"1", "2.5", "3-9"}),
                 is(ERROR_INVALID_INPUT)
         );
         // negative numbers are invalid
@@ -65,6 +92,12 @@ public class PDFUtilsTest {
         assertThat(SplitPDFUtils.checkRangeValidity(
                         NUM_OF_PAGES,
                         new String[]{"1", "2-", "3-9"}),
+                is(ERROR_INVALID_INPUT)
+        );
+        // 3-9- is invalid
+        assertThat(SplitPDFUtils.checkRangeValidity(
+                        NUM_OF_PAGES,
+                        new String[]{"1", "2-", "3-9-"}),
                 is(ERROR_INVALID_INPUT)
         );
         // single - is invalid
