@@ -1,9 +1,6 @@
 name: CI/CD Pipeline
 
-on:
-  push:
-    branches:
-      - master  # Executar apenas quando houver push na branch main
+on: [push]
 
 jobs:
   build:
