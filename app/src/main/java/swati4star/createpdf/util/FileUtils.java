@@ -400,6 +400,7 @@ public class FileUtils {
 
     public enum FileType {
         e_PDF,
-        e_TXT
+        e_TXT,
+        e_EPUB
     }
 }

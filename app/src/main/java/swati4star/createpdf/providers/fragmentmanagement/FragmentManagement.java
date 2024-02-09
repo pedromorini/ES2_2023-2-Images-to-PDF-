@@ -45,12 +45,14 @@ import swati4star.createpdf.fragment.HomeFragment;
 import swati4star.createpdf.fragment.ImageToPdfFragment;
 import swati4star.createpdf.fragment.InvertPdfFragment;
 import swati4star.createpdf.fragment.MergeFilesFragment;
+import swati4star.createpdf.fragment.PdfToEpubFragment;
 import swati4star.createpdf.fragment.PdfToImageFragment;
 import swati4star.createpdf.fragment.QrBarcodeScanFragment;
 import swati4star.createpdf.fragment.RemoveDuplicatePagesFragment;
 import swati4star.createpdf.fragment.RemovePagesFragment;
 import swati4star.createpdf.fragment.SettingsFragment;
 import swati4star.createpdf.fragment.SplitFilesFragment;
+import swati4star.createpdf.fragment.TranslatePdfFragment;
 import swati4star.createpdf.fragment.ViewFilesFragment;
 import swati4star.createpdf.fragment.ZipToPdfFragment;
 import swati4star.createpdf.fragment.texttopdf.TextToPdfFragment;
@@ -253,6 +255,12 @@ public class FragmentManagement implements IFragmentManagement {
                 break;
             case R.id.nav_faq:
                 fragment = new FAQFragment();
+                break;
+            case R.id.nav_translate_pdf:
+                fragment = new TranslatePdfFragment();
+                break;
+            case R.id.nav_pdf_to_epub:
+                fragment = new PdfToEpubFragment();
                 break;
         }
 
