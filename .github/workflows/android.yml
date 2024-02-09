@@ -1,6 +1,9 @@
 name: CI/CD Pipeline
 
-on: [push]
+on: 
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -15,6 +18,9 @@ jobs:
       with:
         java-version: 17
         distribution: 'adopt'
+
+    - name: Instalar dependências
+      run: ./gradlew dependencies --info
 
     - name: Compilar código
       run: ./gradlew build --info
