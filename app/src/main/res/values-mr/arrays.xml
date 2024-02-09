@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="sort_options">
@@ -25,7 +24,6 @@
         <item>एनक्रिप्टेड केले</item>
         <item>उलटा</item>
     </string-array>
-=======
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="sort_options">
@@ -52,5 +50,4 @@
         <item>एनक्रिप्टेड केले</item>
         <item>उलटा</item>
     </string-array>
->>>>>>> 0fc0a24b3526dba6d4140589e0fc9390c6865281
 </resources>
