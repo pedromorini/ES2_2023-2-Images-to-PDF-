@@ -1,9 +1,27 @@
-name: Meu Workflow
-on: [push]
+name: Testes e Cobertura de Código
+
+on:
+  push:
+    branches:
+      - master  # Executar apenas quando houver push na branch main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
+    
     steps:
-    - name: Imprimir mensagem
-      run: echo "Minha ação foi acionada!"
+    - name: Checkout do código
+      uses: actions/checkout@v2
+
+    - name: Configurar ambiente Java
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+
+    - name: Executar testes
+      run: ./gradlew clean test --info
+
+    - name: Cobertura de Código com Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}  # Token de acesso do Codecov
