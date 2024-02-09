@@ -45,7 +45,7 @@ public class ImageUtils {
     public String mImageScaleType;
 
     public static ImageUtils getInstance() {
-        return ImageUtils.SingletonHolder.INSTANCE;
+        return SingletonHolder.INSTANCE;
     }
 
     /**
@@ -59,11 +59,9 @@ public class ImageUtils {
     static Rectangle calculateFitSize(float originalWidth, float originalHeight, Rectangle documentSize) {
         float widthChange = (originalWidth - documentSize.getWidth()) / originalWidth;
         float heightChange = (originalHeight - documentSize.getHeight()) / originalHeight;
-
         float changeFactor = Math.max(widthChange, heightChange);
         float newWidth = originalWidth - (originalWidth * changeFactor);
         float newHeight = originalHeight - (originalHeight * changeFactor);
-
         return new Rectangle(Math.abs((int) newWidth), Math.abs((int) newHeight));
     }
 
@@ -89,18 +87,18 @@ public class ImageUtils {
      * @param finalBitmap - bitmap to save
      */
     public static String saveImage(String filename, Bitmap finalBitmap) {
-
         if (finalBitmap == null || checkIfBitmapIsWhite(finalBitmap))
             return null;
-
         String root = Environment.getExternalStorageDirectory().toString();
         File myDir = new File(root + pdfDirectory);
         String fileName = filename + ".png";
-
         File file = new File(myDir, fileName);
-        if (file.exists())
-            file.delete();
-
+        if (file.exists()) {
+            boolean deleteSuccess = file.delete();
+            if (!deleteSuccess) {
+                Log.e("ImageUtils", "Failed to delete file: " + file.getAbsolutePath());
+            }
+        }
         try {
             FileOutputStream out = new FileOutputStream(file);
             finalBitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
@@ -110,7 +108,6 @@ public class ImageUtils {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return myDir + "/" + fileName;
     }
 
@@ -132,7 +129,7 @@ public class ImageUtils {
     }
 
     /**
-     * Checks of the bitmap is just all white pixels
+     * Checks if the bitmap is just all white pixels
      *
      * @param bitmap - input bitmap
      * @return - true, if bitmap is all white
@@ -156,7 +153,6 @@ public class ImageUtils {
         int width = bmp.getWidth(), height = bmp.getHeight();
         int radius = Math.min(width, height); // set the smallest edge as radius.
         Bitmap bitmap;
-
         if (bmp.getWidth() != radius || bmp.getHeight() != radius) {
             bitmap = Bitmap.createScaledBitmap(bmp,
                     (int) (bmp.getWidth() / 1.0f),
@@ -164,13 +160,10 @@ public class ImageUtils {
         } else {
             bitmap = bmp;
         }
-
         Bitmap output = Bitmap.createBitmap(radius, radius, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(output);
-
         final Paint paint = new Paint();
         final Rect rect = new Rect(0, 0, radius, radius);
-
         paint.setAntiAlias(true);
         paint.setFilterBitmap(true);
         paint.setDither(true);
@@ -180,7 +173,6 @@ public class ImageUtils {
                 radius / 2f + 0.1f, paint);
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
         canvas.drawBitmap(bitmap, rect, rect, paint);
-
         return output;
     }
 
@@ -192,20 +184,16 @@ public class ImageUtils {
      */
     public Bitmap getRoundBitmapFromPath(String path) {
         File file = new File(path);
-
         // First decode with inJustDecodeBounds=true to check dimensions
         BitmapFactory.Options bmOptions = new BitmapFactory.Options();
         bmOptions.inJustDecodeBounds = true;
         BitmapFactory.decodeFile(file.getAbsolutePath(), bmOptions);
-
         // Calculate inSampleSize
         bmOptions.inSampleSize = calculateInSampleSize(bmOptions);
-
         // Decode bitmap with actual size
         bmOptions.inJustDecodeBounds = false;
         Bitmap smallBitmap = BitmapFactory.decodeFile(file.getAbsolutePath(), bmOptions);
         if (smallBitmap == null) return null;
-
         return ImageUtils.getInstance().getRoundBitmap(smallBitmap);
     }
 
@@ -221,12 +209,9 @@ public class ImageUtils {
         final int height = options.outHeight;
         final int width = options.outWidth;
         int inSampleSize = 1;
-
         if (height > 500 || width > 500) {
-
             final int halfHeight = height / 2;
             final int halfWidth = width / 2;
-
             // Calculate the largest inSampleSize value that is a power of 2 and keeps both
             // height and width larger than the requested height and width.
             while ((halfHeight / inSampleSize) >= 500
@@ -234,12 +219,10 @@ public class ImageUtils {
                 inSampleSize *= 2;
             }
         }
-
         return inSampleSize;
     }
 
-    public void showImageScaleTypeDialog(Context context, Boolean saveValue) {
-
+    public void showImageScaleTypeDialog(Context context, boolean saveValue) {
         SharedPreferences mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         MaterialDialog.Builder builder = DialogUtils.getInstance().createCustomDialogWithoutContent((Activity) context,
                 R.string.image_scale_type);
@@ -253,7 +236,6 @@ public class ImageUtils {
                                 mImageScaleType = IMAGE_SCALE_TYPE_ASPECT_RATIO;
                             else
                                 mImageScaleType = IMAGE_SCALE_TYPE_STRETCH;
-
                             CheckBox mSetAsDefault = view.findViewById(R.id.cbSetDefault);
                             if (saveValue || mSetAsDefault.isChecked()) {
                                 SharedPreferences.Editor editor = mSharedPreferences.edit();
@@ -269,7 +251,7 @@ public class ImageUtils {
     }
 
     /**
-     * convert a bitmap to gray scale and return it
+     * Convert a bitmap to gray scale and return it
      *
      * @param bmpOriginal original bitmap which is converted to a new
      *                    grayscale bitmap
@@ -278,7 +260,6 @@ public class ImageUtils {
         int width, height;
         height = bmpOriginal.getHeight();
         width = bmpOriginal.getWidth();
-
         Bitmap bmpGrayscale = Bitmap.createBitmap(width, height, bmpOriginal.getConfig());
         Canvas c = new Canvas(bmpGrayscale);
         Paint paint = new Paint();
@@ -293,6 +274,4 @@ public class ImageUtils {
     private static class SingletonHolder {
         static final ImageUtils INSTANCE = new ImageUtils();
     }
-
-
 }
